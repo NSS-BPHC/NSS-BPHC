@@ -1,0 +1,471 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+.container-events-def {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding-left: 0px;
+  margin-top: 60px;
+  margin-left: 0px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  /*max-width: 1000px;*/
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -100px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(241, 99, 51, 1);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1100px;
+  margin-left: 100px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.button button {
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0);
+  text-align: center;
+  align-content: center;
+  padding: 0.8rem;
+  /*margin-bottom: 400px;*/
+  color: white;
+}
+.button button:hover {
+  background-color: #f1633b;
+  border-color: #f1633b;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+/*Carousel Slides*/
+.carousel-item {
+  height: 100%;
+}
+.slide-wrapper {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  max-width: 96.66666666666666%;
+  margin: 0 10% 0 7%;
+  color: #fff;
+  text-align: left;
+  left: 1.8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.carousel-item img {
+  min-height: 100%;
+  width: 100%;
+  min-width: 960px;
+}
+.carousel-item .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+.carousel-item .button button {
+  background-color: #f1633b;
+  border-color: #f1633b;
+  transition: 0.4s ease-in;
+}
+
+.carousel-item .button button:hover {
+  background-color: rgb(255, 255, 255);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(241, 99, 51, 1);
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+.carousel-control-next,
+.carousel-control-prev {
+  padding: 0;
+  margin: 0;
+  width: 27px;
+}
+.prevNext-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 55px;
+  width: 100%;
+  background: rgb(241, 99, 59);
+  color: white;
+}
+.prevNext-wrapper span {
+  align-self: center;
+}
+/* Events */
+#events {
+  position: relative;
+  min-height: 500px;
+  text-align: center;
+  margin: 0;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+#event_title {
+  z-index: 10;
+  line-height: 5px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 15px 5px;
+  display: inline-block;
+  border-bottom: 2px solid black;
+}
+#events .background {
+  position: absolute;
+  clip-path: polygon(58% 0%, 100% 0%, 100% 100%, 84% 100%);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: rgb(244, 244, 244);
+  margin: 0;
+}
+/*Event cards*/
+.event-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90vw;
+  min-height: 590px;
+  padding: 0;
+  /* background-color: chartreuse; */
+  margin: 40px auto;
+}
+.col-eve {
+  flex: 1;
+  /* width: 50%;  */
+  min-width: 400px;
+}
+.event-wrapper .col-eve {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12.5px;
+}
+.col-eve div {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Event card contents*/
+.col-card-full {
+  flex: 1;
+  padding-left: 10px;
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  transition: 0.5s;
+}
+.col-card-full::after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  opacity: 0.5;
+  position: absolute;
+  background-image: linear-gradient(transparent, black);
+  height: 50%;
+  width: 100%;
+  z-index: 1;
+  transition: 0.5s;
+}
+.col-card-full:hover {
+  flex: 1.4;
+}
+.col-card-full:hover::after {
+  opacity: 1;
+}
+.card-content {
+  transition: bottom 0.5s ease-out;
+  bottom: 0px;
+  position: relative;
+  z-index: 2;
+}
+.col-card-full:hover .card-content {
+  bottom: 30px;
+}
+.col-card {
+  flex: 1;
+  text-align: right;
+}
+.col-card-content {
+  clip-path: polygon(58% 0%, 100% 0%, 100% 100%, 42% 100%);
+  background-color: rgb(34, 34, 34);
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+}
+.col-card-content p {
+  width: 50%;
+}
+.slant {
+  float: left;
+  position: relative;
+  /* bottom: 50px; */
+  /* left: 1; */
+  margin: 0;
+  width: 50%;
+  margin: 0;
+  height: 100%;
+  /* transform: rotate(20deg); */
+  shape-outside: polygon(100% 0, 0 0px, 0px 100%);
+}
+.year-event {
+  font-size: 1.2em;
+  color: #f1633b;
+}
+
+/* About Us */
+#aboutUs {
+  height: 380px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: #f2f2f2;
+}
+#aboutUs-background {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #f1633b;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(75% 0, 100% 0, 100% 100%, 66.66% 100%);
+}
+.aboutUs-content {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+#line {
+  position: relative;
+  height: 100%;
+  flex: 1;
+}
+#line div {
+  width: 100%;
+  height: 2px;
+  background-color: #f1633b;
+  position: absolute;
+  top: calc(94px + 3em);
+  margin: 0;
+  left: 0;
+}
+#text .year-event {
+  margin-top: 94px;
+}
+#text {
+  padding-left: 30px;
+  flex: 3;
+  min-width: 231px;
+  color: black;
+  height: 100%;
+}
+#text h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  color: rgb(244, 244, 244);
+  mix-blend-mode: difference;
+}
+#text a button {
+  background-color: #f1633b;
+}
+#aboutUs-image {
+  flex: 4;
+  padding: 50px;
+  z-index: 1;
+  text-align: center;
+  height: 100%;
+}
+#aboutUs-image img {
+  height: 100%;
+  transition: transform 0.4s;
+}
+#aboutUs-image img:hover {
+  transform: scale(1.1);
+}
+@media screen and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+  .event-wrapper {
+    flex-direction: column;
+    width: 99vw;
+  }
+  .col-eve {
+    width: 100%;
+  }
+  .col-card-full {
+    padding-top: 300px;
+  }
+  .col-card {
+    align-self: center;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 920px) {
+  #line {
+    display: none;
+  }
+}
+@media screen and (max-width: 840px) {
+  #text {
+    height: 320px;
+  }
+  .aboutUs-content,
+  #aboutUs {
+    height: auto;
+    flex-direction: column;
+  }
+  #aboutUs-image {
+    height: 350px;
+  }
+  #aboutUs-image img {
+    width: 90%;
+    height: auto;
+  }
+  #aboutUs-background {
+    clip-path: polygon(68% 0%, 100% 0%, 100% 100%, 24% 100%);
+  }
+  .col-card {
+    max-width: 570px;
+  }
+  .col-card-content p {
+    width: 65%;
+  }
+  .col-card-content {
+    clip-path: polygon(58% 0%, 100% 0%, 100% 100%, 1% 100%);
+    background-color: rgba(34, 34, 34, 0.94);
+  }
+}
+@media screen and (max-width: 1150px) {
+  .col-card-content p {
+    width: 65%;
+  }
+  .col-card-content {
+    clip-path: polygon(58% 0%, 100% 0%, 100% 100%, 10% 100%);
+  }
+}
