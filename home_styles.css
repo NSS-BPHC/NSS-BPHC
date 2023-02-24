@@ -126,19 +126,26 @@ img {
   background-size: cover;
   background-position: center;
 }
+.blurring{
+  background-color: rgba(0,0,0, 0.4);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 30px 40px rgba(0,0,0,0.5);
+}
 .slide-wrapper {
   z-index: 100;
   position: absolute;
   top: 0;
   height: 100%;
   max-width: 96.66666666666666%;
-  margin: 0 10% 0 7%;
+  margin: 10px 10% 10px 7%;
   color: #fff;
   text-align: left;
   left: 1.8%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 .carousel-item img {
   min-height: 100%;
