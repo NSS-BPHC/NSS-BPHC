@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -17,7 +18,7 @@
     />
     <link
       rel="icon"
-      href="https://www.nicepng.com/png/full/944-9446351_the-symbol-for-the-nss-has-been-based.png"
+      href="images/NSS-symbol.png"
       type="image"
       sizes="any"
     />
@@ -29,56 +30,42 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Home</title>
-   
+    <!--- w3 -->
     <link rel="stylesheet" href="home_styles.css" />
-    
+    <!--- w3 -->
   </head>
   <body>
     <!----------------------------Final Navbar ----------------------------------->
-    <header class="page-header">
-      <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="home.html" style="vertical-align: center">
-          <img
-            class="logo"
-            src="https://www.nicepng.com/png/full/944-9446351_the-symbol-for-the-nss-has-been-based.png"
-            alt="nss logo"
-            style="float: left"
-            width="50"
-            height="50"
-          />
-          <p class="nss">NATIONAL SERVICE SCHEME</p>
-          <p class="bits">BITS Pilani, Hyderabad Campus</p>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div id="nav-items" class="navbar-nav ml-auto">
-            <a
-              href="home.html"
-              class="nav-item nav-link navbar-right"
-              style="border: 1px #f1633b solid; color: #f1633b"
-            >
-              Home
-            </a>
-            <a href="Events.html" class="nav-item nav-link"> Events </a>
-            <a href="index.html" class="nav-item nav-link"> About Us </a>
-            <a href="Office_bearers.html" class="nav-item nav-link">
-              Office Bearers
-            </a>
-            <a href="contact-us.html" class="nav-item nav-link"> Contact Us </a>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <div class="wrapper_nav">
+		<header class="page-header">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			  <!-- Navbar content -->
+				<a class="navbar-brand" href="home.html">
+					<img class="logo" src = "images/NSS-symbol.png" 							alt="nss logo" style="float: left;" width="50" height="50">
+					<p class="nss">
+						NATIONAL SERVICE SCHEME	
+					</p>
+					<p class="bits">
+						BITS Pilani, Hyderabad Campus
+					</p>
+			    </a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-									controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+			  	</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<div id="nav-items" class="navbar-nav ml-auto">
+					<a href="home.html" class="nav-item nav-link navbar-right" style="border: 1px #F1633B solid; color:#F1633B"> Home </a>
+					<a href="Events.html"  class="nav-item nav-link" > Events </a>
+					<a href="index.html" class="nav-item nav-link"> About Us </a>
+					<a href="Office_bearers.html" class="nav-item nav-link"> Office Bearers </a>
+					<a href="contact-us.html" class="nav-item nav-link"> Contact Us </a>
+					
+				</div>
+				</div>
+				
+			</nav>
+		</header>
+	</div>
 
     <!------------------------------Old Nav Bar Implementation---------------------------------
 			
@@ -285,7 +272,7 @@
       <div class="event-wrapper">
         <div class="col-eve">
           <div class="col-card-full" style="background-image: url('images/tree.jpg')">
-            <div class="card-content">
+            <div class="card-content" style="padding-right: 20px">
               <div class="year-event">2019</div>
 				<a href="allEvents.html#main_event1"> <h2>Tree Adoption</h2>  </a>
               <p>
@@ -337,10 +324,20 @@
         </div>
       </div>
     </section>
-	  <section style="height: 180px;text-align: center; padding-top: 50px;"><h2>YouTube | Coming Soon</h2></section>
+	  <div style="height: 500px;text-align: center; padding-top: 50px;">
+		  <h1>Our YouTube Channel</h1>
+		  <br>
+		  <iframe width="400" height="200" src="https://www.youtube.com/embed/55L1q9b8bu4">
+			</iframe>
+	  </div>
     <!-- About Us end -->
 
-    <footer>
+    <footer class="footer-big">
+		<style>
+			a:hover{
+				color:black;
+			}
+		</style>
       <div class="footer-contacts" style="font-size:15px;">
         <div class="wrapper">
           <div class="footer-title">Contacts</div>
@@ -360,23 +357,24 @@
             <i class="fa fa-phone" aria-hidden="true"></i> +91 7032199226
           </div>
         </div>
+		  
       </div>
       <div class="footer-list">
         <div class="wrapper">
-          <div class="footer-title">List A</div>
-          <div class="list-item">1</div>
-          <div class="list-item">2</div>
-          <div class="list-item">3</div>
-          <div class="list-item">4</div>
+          <div class="footer-title">Other Events</div>
+          <div class="list-item"><a href="https://www.facebook.com/nss.bphc/posts/1354512864741119" target="_blank">Anemia Screening</a></div>
+          <div class="list-item"><a href="https://www.facebook.com/nss.bphc/posts/1248791461979927" target="_blank">Self Defence Workshop</a></div>
+          <div class="list-item"><a href="https://www.facebook.com/nss.bphc/posts/1416556738536731" target="_blank">Mother's Day Event</a></div>
+          <div class="list-item"><a href="https://www.facebook.com/groups/bphcshoutbox/permalink/3430148453714408" target="_blank">Online Webinars</a></div>
         </div>
       </div>
       <div class="footer-list">
         <div class="wrapper">
-          <div class="footer-title">List B</div>
-          <div class="list-item">1</div>
-          <div class="list-item">2</div>
-          <div class="list-item">3</div>
-          <div class="list-item">4</div>
+          <div class="footer-title">Other Works</div>
+          <div class="list-item"><a href="https://drive.google.com/file/d/1L1JEWtBN1z2-zqafU9j6huj8PKbm1WoD/view?fbclid=IwAR2dwLKf4242RxsfNnHtfP70uxhWXuz1s7KMkqjPjJc80ryDg8zB8CFIcT4" target="_blank">Magazine-2018</a></div>
+          <div class="list-item"><a href="https://www.facebook.com/nss.bphc/posts/1057351637790578" target="_blank">Visit to Akshaya Patra</a></div>
+          <div class="list-item"><a href="https://www.facebook.com/nss.bphc/posts/1184585721733835" target="_blank">Village Surveys</a></div>
+          <div class="list-item"><a href="https://www.facebook.com/groups/bphcshoutbox/permalink/2945566002172658" target="_blank">Plastic Free BPHC</a></div>
         </div>
       </div>
       <div class="footer-followUs"> <div class="wrapper">
@@ -399,9 +397,102 @@
             Instagram
           </a>
         </div>
+		  <div class="list-item">
+          <a href="https://www.youtube.com/channel/UCxBWFFLKQvZrwhPCa0K1n8Q" target="_blank">
+            <i class="fa fa-youtube"></i>
+            YouTube
+          </a>
+        </div>
       </div>
     </div>
     </footer>
+	  <footer class="footer-medium">
+      <div class="footer-column black-background-footer">
+        <div class="footer-medium-wrapper-contact">
+          <div class="footer-title">Contacts</div>
+          <p style="margin-bottom: 15px">
+            Shamirpet-Keesara Road,<br />Jawahar Nagar, Shameerpet,<br />Hyderabad,
+            Telangana 500078
+          </p>
+          <div class="footer-iconContent">
+            <i
+              class="fa fa-envelope"
+              aria-hidden="true"
+              style="height: 1px"
+            ></i>
+            nss@hyderabad.bits-piani.ac.in
+          </div>
+          <div class="footer-iconContent" style="margin: 12px 0">
+            <i class="fa fa-phone" aria-hidden="true"></i> +91 7032199226
+          </div>
+        </div>
+        <div
+          style="
+            max-height: 2px;
+            min-height: 2px;
+            align-self: center;
+            transform: translateX(-30px);
+            width: 70%;
+            background: rgba(255, 255, 255, 0.8);
+          "
+        ></div>
+        <div class="footer-list-medium">
+          <div class="footer-title">Follow Us</div>
+          <div class="list-item">
+          <a href="https://www.facebook.com/nss.bphc" target="_blank">
+            <i class="fa fa-facebook-square"></i>
+            Facebook
+          </a>
+        </div>
+        <div class="list-item">
+          <a href="https://www.linkedin.com/company/nss-birla-institute-of-technology-and-science-hyderabad/mycompany/" target="_blank">
+            <i class="fa fa-linkedin"></i>
+            LinkedIn
+          </a>
+        </div>
+        <div class="list-item">
+          <a href="https://www.instagram.com/nss_bphc/" target="_blank">
+            <i class="fa fa-instagram"></i>
+            Instagram
+          </a>
+        </div>
+		  <div class="list-item">
+          <a href="https://www.youtube.com/channel/UCxBWFFLKQvZrwhPCa0K1n8Q" target="_blank">
+            <i class="fa fa-youtube"></i>
+            YouTube
+          </a>
+        </div>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <div class="footer-list">
+          <div class="wrapper">
+            <div class="footer-title">Other Events</div>
+            <div class="list-item"><a href="https://www.facebook.com/nss.bphc/posts/1354512864741119" target="_blank">Anemia Screening</a></div>
+          <div class="list-item"><a href="https://www.facebook.com/nss.bphc/posts/1248791461979927" target="_blank">Self Defence Workshop</a></div>
+          <div class="list-item"><a href="https://www.facebook.com/nss.bphc/posts/1416556738536731" target="_blank">Mother's Day Event</a></div>
+          <div class="list-item"><a href="https://www.facebook.com/groups/bphcshoutbox/permalink/3430148453714408" target="_blank">Online Webinars</a></div>
+          </div>
+        </div>
+        <div class="footer-list">
+          <div class="wrapper">
+            <div class="footer-title">Other Works</div>
+            <div class="list-item"><a href="https://drive.google.com/file/d/1L1JEWtBN1z2-zqafU9j6huj8PKbm1WoD/view?fbclid=IwAR2dwLKf4242RxsfNnHtfP70uxhWXuz1s7KMkqjPjJc80ryDg8zB8CFIcT4" target="_blank">Magazine-2018</a></div>
+            <div class="list-item"><a href="https://drive.google.com/file/d/1Da7KTrfmt9GHFAxj8IRJGU8KUj3s5Igd/view?usp=sharing" target="_blank">Magazine-2019</a></div>
+          <div class="list-item"><a href="https://www.facebook.com/nss.bphc/posts/1057351637790578" target="_blank">Visit to Akshaya Patra</a></div>
+          <div class="list-item"><a href="https://www.facebook.com/nss.bphc/posts/1184585721733835" target="_blank">Village Surveys</a></div>
+          <div class="list-item"><a href="https://www.facebook.com/groups/bphcshoutbox/permalink/2945566002172658" target="_blank">Plastic Free BPHC</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+	  
+	  
+	  
+		  <div class = "copyright">
+			  © 2020 NSS BITS Pilani Hyderbad. All Rights Reserved.
+		  </div>
     <!------------------------------------------END----------------------------------------------->
 
     <!------------------------- slideshow-----------------------------------------
